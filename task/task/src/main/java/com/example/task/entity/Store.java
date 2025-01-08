@@ -1,10 +1,17 @@
-package com.example.task.Entity;
+package com.example.task.entity;
 
-import jakarta.persistence.*;
-import org.antlr.v4.runtime.misc.NotNull;
-
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.Getter;
+import lombok.Setter;
+import jakarta.validation.constraints.NotNull;
 import java.time.LocalDate;
 
+@Setter
+@Getter
 @Entity
 public class Store {
 
@@ -26,11 +33,10 @@ public class Store {
     private String city;
 
     @NotNull
-    private String pincode;
+    private String pinCode;
 
     private LocalDate createdDate;
 
     private LocalDate updatedDate;
 
-    // Getters and Setters
 }

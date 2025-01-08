@@ -1,10 +1,17 @@
-package com.example.task.Entity;
+package com.example.task.entity;
 
-import jakarta.persistence.*;
-import org.antlr.v4.runtime.misc.NotNull;
-
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.Getter;
+import lombok.Setter;
+import jakarta.validation.constraints.NotNull;
 import java.time.LocalDate;
 
+@Getter
+@Setter
 @Entity
 public class StoreEmployee {
 
@@ -28,5 +35,4 @@ public class StoreEmployee {
 
     private LocalDate updatedDate;
 
-    // Getters and Setters
 }
